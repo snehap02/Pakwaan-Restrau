@@ -19,6 +19,11 @@ const Header = () => {
             <img src={logoImg} alt="logo image" className="w-14"/>
         </div>
       </div>
+      <div className="nav-items">
+        <ul className="nav-links">
+          
+        </ul>
+      </div>
     </div>
   );
 };
