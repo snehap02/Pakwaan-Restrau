@@ -9,7 +9,7 @@ const Header = () => {
     delaySpeed: 1500,
   });
   return (
-    <div className="header">
+    <div className="header top-0 sticky z-[999] bg-white py-2">
       <div className="logo flex items-center px-8">
         <div className="text text-2xl mt-6">
           <span>{logo}</span>
