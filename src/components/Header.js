@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="logo flex items-center px-8">
-        <div className="text text-2xl mt-6 font-bold">
+        <div className="text text-2xl mt-6">
           <span>{logo}</span>
           {/* <Cursor cursorStyle={"|"} /> */}
         </div>
