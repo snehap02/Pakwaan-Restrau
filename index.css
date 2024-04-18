@@ -61,12 +61,13 @@
         src: url('./public/fonts/Roboto-Regular.ttf');
     }
 
-
-
     .text{
         font-family: 'poppins-semibold';
     }
     .banner-text{
         font-family: 'raleway-medium';
+    }
+    .nav-links{
+        font-family: 'montserrat-medium';
     }
 }
