@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import About from "./components/About";
 import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import NewBody from "./components/NewBody";
 
 const App = () => {
     return (
@@ -29,10 +28,6 @@ const appRouter = createBrowserRouter([
                 path: "/about",
                 element: <About/>
             },
-            {
-                path: "/newbody",
-                element: <NewBody/>
-            }
         ]
     }
 ])
