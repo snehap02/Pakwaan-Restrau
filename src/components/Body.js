@@ -21,11 +21,11 @@ const Body = () => {
     setListOfRestaurants(arr1);
   };
   return  (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-full h-full flex flex-col overflow-x-hidden">
       <div className="banner">
-      <div className="text-img">
-        <img src={food} alt="food" className="w-full object-cover relative h-96" />
-        <h2 className="text-center font-extrabold absolute lg:text-7xl py-14 uppercase tracking-widest px-80 -mt-80 object-top bg-red-950 bg-opacity-10">Delight your taste buds with our delicious creations!</h2>
+      <div className="text-img relative">
+        <img src={food} alt="food" className="w-full object-cover h-62 lg:h-80" />
+        <h2 className="text-center px-20 sm:px-72 sm:text-2xl md:text-4xl lg:text-6xl lg:px-20 font-extrabold py-14 uppercase tracking-widest bg-white bg-opacity-30 absolute w-full sm:w-[80rem]">Delight your taste buds with our delicious creations!</h2>
       </div>
       
         <Banner/>

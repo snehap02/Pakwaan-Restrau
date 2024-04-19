@@ -33,13 +33,13 @@ const Banner = () => {
     <div className="banner-comp py-2 mt-6">
       <div className="flex flex-col justify-center">
         <div className="div1 flex justify-between items-center px-10 lg:px-32">
-          <h1 className="title text-2xl font-bold">Got Any Cravings?</h1>
+          <h1 className="title text-lg lg:text-2xl font-bold">Got Any Cravings?</h1>
           <div className="next-prev flex items-center gap-2">
             <KeyboardArrowLeftRoundedIcon sx={{fontSize: "30px"}} className="hover:bg-neutral-300 hover:rounded-full p-1 cursor-pointer" onClick = {slideLeft}/>
             <KeyboardArrowRightRoundedIcon sx={{fontSize: "30px"}} className="hover:bg-neutral-300 hover:rounded-full p-1 cursor-pointer" onClick={slideRight}/>
           </div>
         </div>
-        <div id="slider" className="slider flex w-[80%] h-full scroll-smooth gap-[1.5rem] lg:gap-[3rem] h-42 overflow-x-scroll overflow-y-hidden lg:mx-28 xl:mx-40 mx-14 no scrollbar">
+        <div id="slider" className="slider flex w-[100%] lg:w-[80%] h-full scroll-smooth gap-[1.5rem] lg:gap-[3rem] h-42 overflow-x-scroll overflow-y-hidden lg:mx-28 xl:mx-40 mx-8 no scrollbar">
           {banner?.map((item) => {
             return (
               <div key={item?.id} className="flex justify-center items-center">

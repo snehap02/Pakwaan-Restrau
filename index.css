@@ -3,78 +3,101 @@
 @tailwind utilities;
 
 
-@layer components{
+@layer components {
     @font-face {
         font-family: lato-bold;
         src: url('./public/fonts/Lato-Bold.ttf');
     }
+
     @font-face {
         font-family: lato-light;
         src: url('./public/fonts/Lato-Light.ttf');
     }
+
     @font-face {
         font-family: lato-regular;
         src: url('./public/fonts/Lato-Regular.ttf');
     }
+
     @font-face {
         font-family: lato-thin;
         src: url('./public/fonts/Lato-Thin.ttf');
     }
+
     @font-face {
         font-family: montserrat-medium;
         src: url('./public/fonts/Montserrat-Medium.ttf');
     }
+
     @font-face {
         font-family: montserrat-thin;
         src: url('./public/fonts/Montserrat-VariableFont_wght.ttf');
     }
+
     @font-face {
         font-family: poppins-bold;
         src: url('./public/fonts/Poppins-Bold.ttf');
     }
+
     @font-face {
         font-family: poppins-light;
         src: url('./public/fonts/Poppins-Light.ttf');
     }
+
     @font-face {
         font-family: poppins-semibold;
         src: url('./public/fonts/Poppins-SemiBold.ttf');
     }
+
     @font-face {
         font-family: poppins-thin;
         src: url('./public/fonts/Poppins-Thin.ttf');
     }
+
     @font-face {
         font-family: raleway-medium;
         src: url('./public/fonts/Raleway-Medium.ttf');
     }
+
     @font-face {
         font-family: raleway-regular;
         src: url('./public/fonts/Raleway-Regular.ttf');
     }
+
     @font-face {
         font-family: roboto-medium;
         src: url('./public/fonts/Roboto-Medium.ttf');
     }
+
     @font-face {
         font-family: roboto-regular;
         src: url('./public/fonts/Roboto-Regular.ttf');
     }
+
     @font-face {
         font-family: bond;
         src: url('./public/fonts/Bond Story.ttf');
     }
 
-    .text{
+    .text {
         font-family: 'poppins-semibold';
     }
-    .banner-text{
+
+    .banner-text {
         font-family: 'raleway-medium';
     }
-    .nav-links{
+
+    .nav-links {
         font-family: 'montserrat-medium';
     }
-    .banner h2{
+
+    .banner h2 {
         font-family: 'bond';
+    }
+
+    .text-img h2 {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
