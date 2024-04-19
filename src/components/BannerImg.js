@@ -6,7 +6,7 @@ const BannerImg = (props) => {
     const {imageId} = bannerData;
   return (
     <div>
-        <img src={IMG_URL + imageId} alt="img" className="lg:min-w-[12rem] min-w-[8rem]" />
+        <img src={IMG_URL + imageId} alt="img" className="lg:min-w-[9rem] min-w-[6.8rem]" />
     </div>
   )
 }

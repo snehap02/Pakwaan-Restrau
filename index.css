@@ -60,6 +60,10 @@
         font-family: roboto-regular;
         src: url('./public/fonts/Roboto-Regular.ttf');
     }
+    @font-face {
+        font-family: bond;
+        src: url('./public/fonts/Bond Story.ttf');
+    }
 
     .text{
         font-family: 'poppins-semibold';
@@ -69,5 +73,8 @@
     }
     .nav-links{
         font-family: 'montserrat-medium';
+    }
+    .banner h2{
+        font-family: 'bond';
     }
 }
