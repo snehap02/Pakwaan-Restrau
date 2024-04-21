@@ -6,6 +6,7 @@ import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRigh
 
 const Banner = () => {
   const [banner, setBanner] = useState([]);
+  const [title, setTitle] = useState([]);
 
   useEffect(() => {
     loadBanner();
@@ -15,7 +16,10 @@ const Banner = () => {
     const res = await fetch(RESTRAU_URL);
     const json = await res.json();
     const arr = json?.data?.cards[0]?.card?.card?.imageGridCards?.info;
+    const titleArr = json?.data?.cards[0]?.card?.card?.header.title;
     console.log(arr);
+    // console.log(titleArr);
+    setTitle(titleArr);
     setBanner(arr);
   };
 
@@ -33,7 +37,7 @@ const Banner = () => {
     <div className="banner-comp py-2 mt-6">
       <div className="flex flex-col justify-center">
         <div className="div1 flex justify-between items-center px-10 lg:px-32">
-          <h1 className="title text-lg lg:text-2xl font-bold">Got Any Cravings?</h1>
+          <h1 className="title text-lg lg:text-2xl font-bold">{title}</h1>
           <div className="next-prev flex items-center gap-2">
             <KeyboardArrowLeftRoundedIcon sx={{fontSize: "30px"}} className="hover:bg-neutral-300 hover:rounded-full p-1 cursor-pointer" onClick = {slideLeft}/>
             <KeyboardArrowRightRoundedIcon sx={{fontSize: "30px"}} className="hover:bg-neutral-300 hover:rounded-full p-1 cursor-pointer" onClick={slideRight}/>
