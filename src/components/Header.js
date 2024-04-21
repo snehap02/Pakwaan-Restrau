@@ -6,8 +6,6 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import LoginIcon from "@mui/icons-material/Login";
 import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
 import PersonIcon from "@mui/icons-material/Person";
-import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import LunchDiningRoundedIcon from '@mui/icons-material/LunchDiningRounded';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -43,21 +41,21 @@ const Header = () => {
               />
             </li>
             <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <Link to="/about">Search</Link>
+              <Link to="/search">Search</Link>
               <SearchRoundedIcon
                 sx={{ color: "#F06C21" }}
                 className="cursor-pointer -mt-[3px]"
               />
             </li>
             <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <Link to="/about">Sign In</Link>
+              <Link to="/login">Sign In</Link>
               <LoginIcon
                 sx={{ color: "#F06C21" }}
                 className="cursor-pointer -mt-[3px]"
               />
             </li>
             <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <Link to="/about">Cart</Link>
+              <Link to="/cart">Cart</Link>
               <ShoppingBasketIcon
                 sx={{ color: "#F06C21" }}
                 className="cursor-pointer -mt-[3px]"
@@ -77,7 +75,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <Link to="/about">
+              <Link to="/search">
               <SearchRoundedIcon
                 sx={{ color: "#F06C21" , fontSize: "30px" }}
                 className="cursor-pointer -mt-[3px]"
@@ -85,7 +83,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <Link to="/about">
+              <Link to="/login">
               <LoginIcon
                 sx={{ color: "#F06C21" , fontSize: "30px" }}
                 className="cursor-pointer -mt-[3px]"
@@ -93,7 +91,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <Link to="/about">
+              <Link to="/cart">
               <ShoppingBasketIcon
                 sx={{ color: "#F06C21" , fontSize: "30px" }}
                 className="cursor-pointer -mt-[3px]"

@@ -18,7 +18,7 @@ const Body = () => {
     const data = await fetch(RESTRAU_URL);
     const json = await data.json();
     console.log(json);
-    const resTitles = json?.data?.cards[1]?.card?.card?.title;
+    const resTitles = json?.data?.cards[2]?.card?.card?.title;
     // console.log(arr1);
     setResTitle(resTitles);
   };
@@ -36,11 +36,15 @@ const Body = () => {
           </h2>
         </div>
         <Banner />
-        <div className="flex flex-col lg:flex-row justify-center 1208:justify-between items-center px-10 lg:px-32 mt-8 py-10">
+        <div className="flex flex-col 1208:flex-row gap-5 justify-center 1208:justify-between items-center px-10 lg:px-32 py-8">
           <h1 className="res-title text-lg lg:text-2xl font-bold text-center md:text-left">
             {resTitle}
           </h1>
-          <button className="top-restrau py-3 px-4 rounded-full shadow-md shadow-neutral-600 text-lg lg:text-2xl font-medium bg-[#f5d649]">Top Rated Restaurants</button>
+          <button className="top-restrau py-3 px-4 rounded-full shadow-md shadow-neutral-600 text-lg lg:text-xl font-medium bg-[#f5d649]">Top Rated Restaurants</button>
+        </div>
+
+        <div className="restrau-container">
+          
         </div>
       </div>
     </div>
