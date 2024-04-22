@@ -27,7 +27,7 @@ const Body = () => {
     setResTitle(resTitles);
   };
   return (
-    <div className="w-full h-full flex flex-col overflow-x-hidden">
+    <div className="w-full h-full flex flex-col overflow-x-hidden overflow-y-hidden">
       <div className="banner">
         <div className="text-img relative">
           <img
@@ -47,7 +47,7 @@ const Body = () => {
           <button className="top-restrau py-3 px-4 rounded-full shadow-md shadow-neutral-600 text-lg lg:text-xl font-medium bg-[#f5d649]">Top Rated Restaurants</button>
         </div>
 
-        <div className="restrau-container flex flex-wrap justify-center items-center px-6 gap-8">
+        <div className="restrau-container flex flex-wrap justify-center items-center px-6 gap-8 pb-20">
         {
           listOfRestaurants.map((restaurant) => (
             <RestaurantCard key={restaurant?.info?.id} resData={restaurant}/>

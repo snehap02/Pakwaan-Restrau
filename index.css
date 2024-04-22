@@ -103,4 +103,10 @@
     .top-restrau{
         font-family: 'bond';
     }
+    .restaurant-card h2{
+        font-family: 'poppins-light';
+    }
+    .ratings-and-time h2{
+        font-weight: 900;
+    }
 }
