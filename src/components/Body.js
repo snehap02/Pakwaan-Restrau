@@ -5,6 +5,7 @@ import ShimmerUI from "./ShimmerUI";
 import Banner from "./Banner";
 import food from "./images/food.png";
 import TopRestrau from "./TopRestrau";
+import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -19,7 +20,10 @@ const Body = () => {
     const json = await data.json();
     console.log(json);
     const resTitles = json?.data?.cards[2]?.card?.card?.title;
+    const res = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    // console.log(res);
     // console.log(arr1);
+    setListOfRestaurants(res);
     setResTitle(resTitles);
   };
   return (
@@ -43,8 +47,13 @@ const Body = () => {
           <button className="top-restrau py-3 px-4 rounded-full shadow-md shadow-neutral-600 text-lg lg:text-xl font-medium bg-[#f5d649]">Top Rated Restaurants</button>
         </div>
 
-        <div className="restrau-container">
-          
+        <div className="restrau-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 px-8 gap-10 place-items-center">
+        {
+          listOfRestaurants.map((restaurant) => (
+            <RestaurantCard key={restaurant?.info?.id} resData={restaurant}/>
+          ))
+        }
+         
         </div>
       </div>
     </div>
