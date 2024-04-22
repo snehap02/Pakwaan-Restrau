@@ -47,7 +47,7 @@ const Body = () => {
           <button className="top-restrau py-3 px-4 rounded-full shadow-md shadow-neutral-600 text-lg lg:text-xl font-medium bg-[#f5d649]">Top Rated Restaurants</button>
         </div>
 
-        <div className="restrau-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 px-8 gap-10 place-items-center">
+        <div className="restrau-container flex flex-wrap justify-center items-center px-6 gap-8">
         {
           listOfRestaurants.map((restaurant) => (
             <RestaurantCard key={restaurant?.info?.id} resData={restaurant}/>
