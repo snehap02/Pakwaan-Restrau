@@ -6,6 +6,7 @@ import Banner from "./Banner";
 import food from "./images/food.png";
 import TopRestrau from "./TopRestrau";
 import RestaurantCard from "./RestaurantCard";
+import SearchIcon from '@mui/icons-material/Search';
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
@@ -50,13 +51,22 @@ const Body = () => {
           </h1>
           <button
             className="top-restrau py-3 px-4 rounded-full shadow-md shadow-neutral-600 text-lg lg:text-xl font-medium bg-[#f5d649]"
-            onClick={() => {}}
+            onClick={() => {
+              const filteredRestrau = listOfRestaurants?.filter((res) => res.info?.avgRating > 4);
+              setListOfRestaurants(filteredRestrau);
+            }}
           >
             Top Rated Restaurants
           </button>
         </div>
 
-        <div className="restrau-container flex flex-wrap justify-center items-center px-6 gap-8 pb-20">
+        <div className="search flex justify-center items-center py-2 px-4 gap-2">
+          <input type="text" className="search-box w-96 md:w-[30rem] p-3 rounded-full border border-orange-200 focus:outline-none px-5 shadow-md shadow-neutral-200"/>
+          <button className="-ml-14 rounded-full p-1 bg-orange-200 cursor-pointer"><SearchIcon sx={{fontSize: "40px", color: "#F06C21"}}/></button>
+        </div>
+
+
+        <div className="restrau-container flex flex-wrap justify-center items-center px-6 gap-8 pb-20 mt-10">
           {listOfRestaurants?.map((restaurant) => (
             <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
           ))}

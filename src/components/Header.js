@@ -9,6 +9,7 @@ import PersonIcon from "@mui/icons-material/Person";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const [login, setlogin] = useState("SignIn");
   const [logo] = useTypewriter({
     words: ["Pakwaan", "पकवान"],
     loop: false,
@@ -41,14 +42,9 @@ const Header = () => {
               />
             </li>
             <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <Link to="/search">Search</Link>
-              <SearchRoundedIcon
-                sx={{ color: "#F06C21" }}
-                className="cursor-pointer -mt-[3px]"
-              />
-            </li>
-            <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <button className="uppercase"><Link to="/login">Sign In</Link></button>
+              <button className="uppercase" onClick={() => {
+                login === "SignIn" ? setlogin("SignOut") : setlogin("SignIn");
+              }}><Link>{login}</Link></button>
               <LoginIcon
                 sx={{ color: "#F06C21" }}
                 className="cursor-pointer -mt-[3px]"
@@ -69,14 +65,6 @@ const Header = () => {
             <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
               <Link to="/about">
               <PersonIcon
-                sx={{ color: "#F06C21" , fontSize: "30px" }}
-                className="cursor-pointer -mt-[3px]"
-              />
-              </Link>
-            </li>
-            <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <Link to="/search">
-              <SearchRoundedIcon
                 sx={{ color: "#F06C21" , fontSize: "30px" }}
                 className="cursor-pointer -mt-[3px]"
               />
