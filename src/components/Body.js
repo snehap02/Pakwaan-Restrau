@@ -20,13 +20,17 @@ const Body = () => {
     const json = await data.json();
     console.log(json);
     const resTitles = json?.data?.cards[2]?.card?.card?.title;
-    const res = json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    const res =
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants;
     // console.log(res);
     // console.log(arr1);
     setListOfRestaurants(res);
     setResTitle(resTitles);
   };
-  return (
+  return listOfRestaurants.length === 0 ? (
+    <ShimmerUI />
+  ) : (
     <div className="w-full h-full flex flex-col overflow-x-hidden overflow-y-hidden">
       <div className="banner">
         <div className="text-img relative">
@@ -44,16 +48,18 @@ const Body = () => {
           <h1 className="res-title text-lg lg:text-2xl font-bold text-center md:text-left">
             {resTitle}
           </h1>
-          <button className="top-restrau py-3 px-4 rounded-full shadow-md shadow-neutral-600 text-lg lg:text-xl font-medium bg-[#f5d649]">Top Rated Restaurants</button>
+          <button
+            className="top-restrau py-3 px-4 rounded-full shadow-md shadow-neutral-600 text-lg lg:text-xl font-medium bg-[#f5d649]"
+            onClick={() => {}}
+          >
+            Top Rated Restaurants
+          </button>
         </div>
 
         <div className="restrau-container flex flex-wrap justify-center items-center px-6 gap-8 pb-20">
-        {
-          listOfRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant?.info?.id} resData={restaurant}/>
-          ))
-        }
-         
+          {listOfRestaurants?.map((restaurant) => (
+            <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+          ))}
         </div>
       </div>
     </div>

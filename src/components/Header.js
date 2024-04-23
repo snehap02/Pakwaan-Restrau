@@ -48,7 +48,7 @@ const Header = () => {
               />
             </li>
             <li className="flex gap-2 justify-center items-center hover:text-[#F06C21] hover:font-semibold">
-              <Link to="/login">Sign In</Link>
+              <button className="uppercase"><Link to="/login">Sign In</Link></button>
               <LoginIcon
                 sx={{ color: "#F06C21" }}
                 className="cursor-pointer -mt-[3px]"

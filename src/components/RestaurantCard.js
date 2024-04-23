@@ -27,7 +27,7 @@ const RestaurantCard = (props) => {
       <h2 className="cuisines text-sm tracking-wide text-neutral-800">
         {cuisines.join(", ")}
       </h2>
-      <h2 className="place text-sm text-neutral-800">
+      <h2 className="place text-sm text-neutral-800 mt-2">
         {areaName}
       </h2>
     </div>
